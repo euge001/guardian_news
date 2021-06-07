@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.imgBk {
+  width: 100%;
+  height: 100%;
+}
+
+.para {
+  padding-top: 1%;
+  text-align: center;
+}
+
+.title {
+  text-align: start;
+}
+
+.world {
+  float: right;
+  color: white;
+  border-radius: 5px;
+  background-color: #7b4dfe;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.politics {
+  float: right;
+  color: white;
+  border-radius: 5px;
+  background-color: #419488;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.business {
+  float: right;
+  color: white;
+  background-color: #4696ec;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.technology {
+  float: right;
+  color: black;
+  border-radius: 5px;
+  background-color: #cedc39;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.sports {
+  float: right;
+  color: white;
+  background-color: #f6c244;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.sport {
+  float: right;
+  color: black;
+  background-color: #f6c244;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.health {
+  float: right;
+  border-radius: 5px;
+  color: white;
+  background-color: #6e757c;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.us {
+  float: right;
+  border-radius: 5px;
+  color: white;
+  background-color: gray;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.nyregion {
+  float: right;
+  border-radius: 5px;
+  color: white;
+  background-color: #dddddd;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Guardian {
+  float: right;
+  border-radius: 5px;
+  color: white;
+  background-color: #14284a;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  /* font-size: 12px; */
+}
+
+.NYTimes {
+  float: right;
+  border-radius: 5px;
+  color: black;
+  background-color: #dddddd;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 5px;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.date {
+  float: left;
+}
+
+.iconsAlign {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge-padding {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+}
+
+.column {
+  background-color: #09357b;
+  border-bottom: 3px solid #d32f2f;
+}
+
+.title {
+  color: #fff;
+  padding: 20px 25px;
+}
+
+.share-bookmark {
+  background: #09357b;
+  color: #fff;
+  width: fit-content !important;
+  padding: 4px 12px 4px 6px;
+  border-radius: 5px;
+}
+
+.parentDArticle .share-bookmark {
+  float: left;
+}

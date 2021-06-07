@@ -1,0 +1,212 @@
+.column {
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+  }
+  
+  .left {
+    width: 16%;
+  }
+  
+  .right {
+    width: 84%;
+  }
+  
+  .headerClass{
+    padding-left: 0;margin: 0;text-align:start;
+  }
+  
+  .para{
+    padding-left: 0;text-align:start;
+  }
+
+  .dateNsection{
+    padding-left: 0;text-align:start;
+    font-weight: inherit;
+   
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .card{
+      width: 100%;
+      display: block;
+    }
+  }
+ 
+  .imgBox{
+  
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* .row:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  } */
+  .row {margin: 0 -5px;
+  
+  border-radius: 4px;
+   border: 1px solid black;
+   margin-bottom: 8px;
+   width: 100%;
+
+  }
+  
+  .cardContents {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    
+  
+  
+  }
+  
+  .cardContents:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .cardContents.p{
+    text-align: start;
+  }
+  
+
+  
+.world{
+    float: right;
+    color: white;
+    border-radius: 5px;
+    background-color:#7B4DFE;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .politics{
+    float: right;
+    color: white;
+    border-radius: 5px;
+    background-color:#419488;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .business{
+    float: right;
+    color: white;
+    background-color: #4696EC;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .technology{
+    float: right;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:#CEDC39;
+    font-weight: bold;
+  }
+  
+  .sports{
+    float: right;
+    color: black;
+    background-color:#F6C244;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .sport{
+    float: right;
+    color: black;
+    background-color: #F6C244;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  .health{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color:#6E757C;
+    font-weight: bold;
+  }
+  
+  .us{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color:gray;
+    font-weight: bold;
+  }
+  
+  .nyregion{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    background-color:#DDDDDD;
+    font-weight: bold;
+  }
+  
+
+  .iconsAlign{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .headerClass{
+    font-size: 80%;
+    font-style: italic;
+  }
+
+  /* styles for '...' */ 
+.block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 3.6em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;  
+  /* place for '...' */
+  margin-right: -1em;
+  padding-right: 1em;
+}
+/* create the ... */
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+}

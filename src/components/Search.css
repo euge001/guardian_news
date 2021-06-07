@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;
+    margin-bottom: 15px;
+  border-color: white;
+  background-color: white;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Style the counter cards */
+  .card {
+   
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  .imgBk{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .para{
+    padding-top: 1%;
+    text-align: center;
+  }
+  
+  .title{
+    text-align: start;
+  }
+  
+  
+  .world{
+    float: right;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:#7B4DFE;
+  }
+  
+  .politics{
+    float: right;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:#419488;
+  }
+  
+  .business{
+    float: right;
+    color: white;
+    background-color: #4696EC;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .technology{
+    float: right;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:#CEDC39;
+  }
+  
+  .sports{
+    float: right;
+    color: black;
+    background-color:#F6C244;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .sport{
+    float: right;
+    color: black;
+    background-color: #F6C244;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .health{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color:#6E757C;
+  }
+  
+  .us{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color:gray;
+  }
+  
+  .nyregion{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color:#DDDDDD;
+  }
+  
+  .Guardian{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color: #14284A;
+  }
+  
+  .Nytimes{
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    background-color:#DDDDDD;
+  }
+  
+  .date{
+    float: left;
+  }
