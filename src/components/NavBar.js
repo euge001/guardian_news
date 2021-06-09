@@ -10,7 +10,6 @@ class NavBar extends Component {
     search: "",
     showNav: true
   };
-
   
   handleClick(e) {
     e.preventDefault();
@@ -34,18 +33,23 @@ class NavBar extends Component {
       <Fragment>
         <div className="navBar">
           <div className="container">
-
+            <div className="logo">
             <Link to={"/"} onClick={() => { window.location.href = "/" }}>
-              <img src={logo} className="logo" alt="ThePeaks" />
+              <img src={logo} alt="ThePeaks" />
             </Link>
-            
-            <div>
+            </div>
+            <div className="search-container">
                 <form onSubmit={this.handleSearch}>
-                <input                  
+                <input
+                      className="search expandright"
+                      id="searchright"  
                       placeholder="Search…"
                       value={this.state.search}
                       onChange={this.handleChange}
-                    />
+                />
+                  <label className="button searchbutton" for="searchright">
+                <span class="mglass">&#9906;</span>
+              </label>
                 </form>
             </div>
           </div>

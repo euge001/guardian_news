@@ -28,6 +28,8 @@
 
 .logo {
   width: 132px;
+  float: left;
+  margin-top: 33px;
 }
 
 /**Search Button **/
@@ -68,6 +70,7 @@
   height: 50px;
   width: 70px;
   vertical-align: bottom;
+  float: right;
 }
 
 .mglass {

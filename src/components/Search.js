@@ -9,11 +9,11 @@ import { withRouter } from "react-router";
   const { results } = props;
   
   return (
-    <Fragment>           
-      <div>
+        
+    <div className="container">
           <Content results={results} />
-        </div>
-    </Fragment>
+    </div>
+
   );
 }
 

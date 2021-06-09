@@ -3,7 +3,7 @@ import './App.css';
 import { Switch,  Route,  withRouter } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import Articles from "./components/Articles";
-import DetailedArticle from "./components/DetailedArticleGuard";
+import DetailedArticle from "./components/DetailedArticle";
 import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Bookmark from "./components/Bookmark";

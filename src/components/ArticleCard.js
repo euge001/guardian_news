@@ -1,9 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import './NewsArticleGuardian.css';
+import './ArticleCard.css';
 
-class NewsArticleGuardian extends React.Component {
+class ArticleCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,35 +12,11 @@ class NewsArticleGuardian extends React.Component {
             item: this.props.article,
             show: false,            
         };
-       
-        this.handleClose = this.handleClose.bind(this);
-        this.handleShow = this.handleShow.bind(this);
         this.handleerr = this.handleerr.bind(this);
-        this.shortenString = this.shortenString.bind(this);
-    }
-
-
-    handleClose() {
-        this.setState({
-            show: false,            
-        });
-    }
-
-    handleShow(e) {
-        e.stopPropagation();
-        this.handleerr(e);
-        this.setState({
-            show: true,        
-        });
     }
 
     handleerr(e) {
         e.preventDefault();
-    }
-
-    shortenString(str, maxLen, separator = '.') {
-        if (str.length <= maxLen) return str;
-        return str.substring(0, str.lastIndexOf(separator, maxLen));
     }
 
     render() {
@@ -71,5 +47,5 @@ class NewsArticleGuardian extends React.Component {
     }
 }
 
-export default withRouter(NewsArticleGuardian);
+export default withRouter(ArticleCard);
 

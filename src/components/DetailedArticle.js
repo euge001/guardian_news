@@ -13,24 +13,24 @@ let dateBk = "";
 let sectionBk = "";
 let typeBk = "";
 let urlToPass = "";
-let book;
 let query = "";
 
-//this detailed article is for Guardian pages
-class DetailedArticleGuard extends React.Component {
+
+class DetailedArticle extends React.Component {
   constructor(props) {
     super(props);
     query = this.props.location.search.substring(4);
 
-    var aaa = JSON.parse(localStorage.getItem("storeTest"));
-    var test = aaa[query] != null ? true : false;
+    var store = JSON.parse(localStorage.getItem("storeTest"));
+    var store = store[query] != null ? true : false;
 
     this.state = {
       error: null,
       loading: false,
       items: [],
       articleId: query,
-      bookmarkChecker: test,
+      bookmarkChecker: store ,
+      book: ""
     };
 
     this.storeData = this.storeData.bind(this);
@@ -38,21 +38,21 @@ class DetailedArticleGuard extends React.Component {
     this.checkEmpty = this.checkEmpty.bind(this);
   }
 
-  handleDelete(urlToDel) {
-    var aaa = JSON.parse(localStorage.getItem("storeTest"));
-    delete aaa[urlToDel];
+  handleDelete(urlToDel) {    
+    var bookmrk = JSON.parse(localStorage.getItem("storeTest"));
+    delete bookmrk[urlToDel];
 
-    localStorage.setItem("storeTest", JSON.stringify(aaa));
+    localStorage.setItem("storeTest", JSON.stringify(bookmrk));
 
     this.setState({
       bookmarkChecker: false,
+      book: false
     });
-
-    book = false;
+   
 
     toast("Removing " + titleBk, {
       className: css({
-        color: "#000000 !important",
+        color: "#000000 !important"
       }),
     });
   }
@@ -69,14 +69,14 @@ class DetailedArticleGuard extends React.Component {
         (res) => {
           this.setState({
             isLoaded: true,
-            items: res.response.content,
+            items: res.response.content
           });
         },
         (error) => {
           console.log(error);
           this.setState({
             isLoaded: true,
-            error,
+            error
           });
         }
       )
@@ -85,16 +85,13 @@ class DetailedArticleGuard extends React.Component {
       });
   }
 
-  shortenString(str, maxLen, separator = ".") {
-    if (str.length <= maxLen) return str;
-    return str.substring(0, str.lastIndexOf(separator, maxLen));
-  }
 
   checkEmpty(str) {
     if (str.length === 0 || str.length === null || str === "" || str === " ")
-      return true;
+    return true;
     return false;
   }
+
   storeData() {
     var storeTest = {
       title: titleBk,
@@ -103,42 +100,41 @@ class DetailedArticleGuard extends React.Component {
       section: sectionBk,
       type: typeBk,
       url: urlToPass,
-      quer: query,
+      quer: query
     };
 
-    var aaa = JSON.parse(localStorage.getItem("storeTest"));
-    aaa[query] = storeTest;
+    var bookmrk = JSON.parse(localStorage.getItem("storeTest"));
+    bookmrk[query] = storeTest;
 
-    localStorage.setItem("storeTest", JSON.stringify(aaa));
+    localStorage.setItem("storeTest", JSON.stringify(bookmrk));
 
     toast("Saving " + titleBk, {
       className: css({
-        color: "#000000 !important",
+        color: "#000000 !important"
       }),
     });
 
     this.setState({
       bookmarkChecker: true,
-    });
-    book = true;
+      book: true
+    });    
   }
 
   render() {
     const { error, isLoaded, items } = this.state;
     let imgsrc = "";
     let dateString = "";
-    let strMore = "";
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <Loader />;
     } else {
+
       titleBk = items.webTitle;
       dateBk = items.webPublicationDate.substring(0, 10);
       sectionBk = items.sectionId;
       typeBk = "Guardian";
       urlToPass = items.webUrl;
-
       dateString = items.webPublicationDate.substring(0, 10);
 
       try {
@@ -154,17 +150,17 @@ class DetailedArticleGuard extends React.Component {
         return (
           <div>
             {
-              <div>
+              <div className="container">
                 <div className="parentDArticle">
                   <div className="div1">
-                    <div className="card">
-                      <div className="share-bookmark">
+       
+                      <div className="w100 share-bookmark">
                         <span onClick={() => this.handleDelete(items.webUrl)}>
                           <MdBookmark
                             data-tip="Bookmark"
                             data-for="bookmarkColor"
                             color="red"
-                            size={32}
+                            size={20}
                           />
                           <ReactTooltip
                             place="top"
@@ -172,20 +168,21 @@ class DetailedArticleGuard extends React.Component {
                             effect="solid"
                             id="bookmarkColor"
                           />
-                        </span>
+                      </span>
+                      Remove bookmark
                       </div>
 
-                      <span>{dateString}</span>
-
-                      <h3 className="card-title">{titleBk}</h3>
-
-                      <div className="card-body">
-                        <p>{items.fields.bodyText}.</p>
-                      </div>
-                    </div>
+                    <div className="w100">{dateString}</div>
+                    <h1 className="">{titleBk}</h1>                    
+                    <h3 className="">{items.fields.trailText}</h3>
+                    <hr />
                   </div>
+                  
+                  <div className="div3 body">
+                  <div dangerouslySetInnerHTML={ {__html: items.fields.body} } />                  
+                  </div>               
 
-                  <div className="div2">
+                  <div className="div4">
                     <img
                       className="card-img-top"
                       src={imgsrc}
@@ -199,11 +196,11 @@ class DetailedArticleGuard extends React.Component {
         );
       } else {
         return (
-          <div>
+          <div className="container">
             <div className="parentDArticle">
+
               <div className="div1">
-                <div className="share-bookmark">
-                  <div className="card">
+                <div className="w100 share-bookmark">
                     <span onClick={this.storeData}>
                       <MdBookmarkBorder
                         data-tip="Bookmark"
@@ -217,22 +214,24 @@ class DetailedArticleGuard extends React.Component {
                         effect="solid"
                         id="bookmark"
                       />
-                    </span>
+                  </span>
+                  Add bookmark
                   </div>
 
-                  <span>{dateString}</span>
-
-                  <h3 className="card-title">{titleBk}</h3>
-
-                  <div className="card-body">
-                    <p>{items.fields.bodyText}.</p>
+                  <div className="w100">{dateString}</div>
+                  <h1 className="">{titleBk}</h1>                    
+                  <h3 className="">{items.fields.trailText}</h3>
+                  <hr />
                   </div>
-                </div>
-              </div>
-
-              <div className="div2">
+                  
+                  <div className="div3 body">
+                  <div dangerouslySetInnerHTML={ {__html: items.fields.body} } />                  
+                  </div>
+               
+                <div className="div4">
                 <img className="card-img-top" src={imgsrc} alt="Card cap"></img>
               </div>
+
             </div>
           </div>
         );
@@ -241,4 +240,4 @@ class DetailedArticleGuard extends React.Component {
   }
 }
 
-export default DetailedArticleGuard;
+export default DetailedArticle;

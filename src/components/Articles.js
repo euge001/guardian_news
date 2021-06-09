@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import NewsArticleGuardian from "./NewsArticleGuardian";
-import { MdBookmarkBorder, MdBookmark } from "react-icons/md";
+import ArticleCard from "./ArticleCard";
+import { MdBookmark } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import "./Articles.css";
@@ -46,7 +46,6 @@ const Articles = () => {
     setSort_term(e.target.value);
   }
 
-
     if (loading === true) {
         return <Loader/>;
   }
@@ -84,7 +83,7 @@ const Articles = () => {
           {articles.slice(0, 8).map((item, i) => {
             return (
               <div className={"div" + i}>
-                <NewsArticleGuardian key={item.id} article={item} />
+                <ArticleCard key={item.id} article={item} />
               </div>
             );
           })}
@@ -98,7 +97,7 @@ const Articles = () => {
           {section.slice(0, 3).map((item, i) => {
             return (
               <div className={"div3col" + i}>                
-                <NewsArticleGuardian key={item.id} article={item} />
+                <ArticleCard key={item.id} article={item} />
               </div>
             );
           })}

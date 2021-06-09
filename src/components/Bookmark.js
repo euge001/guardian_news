@@ -1,22 +1,16 @@
 import React from "react";
 import 'react-toastify/dist/ReactToastify.css'; 
 import "./Bookmark.css";
-import BookmarkG from "./BookmarkG";
+import BookmarkCard from "./BookmarkCard";
 
 class Bookmark extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
         error: null,
-        loading: false,
-        show: false  
+        loading: false
     };
 
-    this.handleClose = this.handleClose.bind(this);
-    this.handleShow = this.handleShow.bind(this);
-    this.handleerr = this.handleerr.bind(this);
-    this.shortenString = this.shortenString.bind(this);
-    this.handleClick = this.handleClick.bind(this);
     this.handleDelete=this.handleDelete.bind(this);
 }
 
@@ -25,35 +19,7 @@ class Bookmark extends React.Component{
         x: ''
     });
   }
-
-  shortenString(str, maxLen, separator = '.') {
-      if (str.length <= maxLen) return str;
-      return str.substring(0, str.lastIndexOf(separator, maxLen));
-  }
-
-  handleClick = (e) => {
-    e.stopPropagation();   
-  }
-
-  handleClose() {
-        this.setState({
-        show: false,        
-    });
-  }
-
-  handleShow(e) {
-    e.stopPropagation();
-    this.handleerr(e);
-    this.setState({
-        show: true,    
-    });
-  }
-
-
-  handleerr(e) {
-    e.preventDefault();
-  }
-    
+   
   render() {
         var retrievedObject = localStorage.getItem('storeTest');
         var str = JSON.parse(retrievedObject);
@@ -68,7 +34,7 @@ class Bookmark extends React.Component{
  
             let urlToDetailed = cards_data[i].url.substring(28);
             cards.push(
-              <BookmarkG data={cards_data[i]} url={urlToDetailed} callback={this.handleDelete} key={urlToDetailed}/>             
+              <BookmarkCard data={cards_data[i]} url={urlToDetailed} callback={this.handleDelete} key={urlToDetailed}/>             
             )        
         }
 
