@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import Search from "./Search";
 import { Link, withRouter } from "react-router-dom";
 import logo from "../assets/logo.png";
-import "./HeaderNavBar.css";
+import "./NavBar.css";
 
 
 class NavBar extends Component {
