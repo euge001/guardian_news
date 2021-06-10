@@ -7,9 +7,9 @@
 5. Add to Bookmark, Bookmark Page, remove from Boomark at Bookmark Page is ready
 6. Remove Bookmark at Detailed Article Page is not complete
 7. CSS is not complete
+8. Code need to be refactored before production
 
 To install:
-
 1. Clone Repo
 2. Node install
 3. NPM start
