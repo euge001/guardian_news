@@ -57,104 +57,6 @@ body {
   text-align: start;
 }
 
-.world {
-  float: right;
-  color: white;
-  border-radius: 5px;
-  background-color: #7b4dfe;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.politics {
-  float: right;
-  color: white;
-  border-radius: 5px;
-  background-color: #419488;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.business {
-  float: right;
-  color: white;
-  background-color: #4696ec;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.technology {
-  float: right;
-  color: black;
-  border-radius: 5px;
-  background-color: #cedc39;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.sports {
-  float: right;
-  color: white;
-  background-color: #f6c244;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.sport {
-  float: right;
-  color: black;
-  background-color: #f6c244;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.health {
-  float: right;
-  border-radius: 5px;
-  color: white;
-  background-color: #6e757c;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.us {
-  float: right;
-  border-radius: 5px;
-  color: white;
-  background-color: gray;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.nyregion {
-  float: right;
-  border-radius: 5px;
-  color: white;
-  background-color: #dddddd;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-  font-weight: bold;
-}
 
 .Guardian {
   float: right;
@@ -168,17 +70,6 @@ body {
   /* font-size: 12px; */
 }
 
-.NYTimes {
-  float: right;
-  border-radius: 5px;
-  color: black;
-  background-color: #dddddd;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-right: 5px;
-  font-size: 19px;
-  font-weight: bold;
-}
 
 .date {
   float: left;
