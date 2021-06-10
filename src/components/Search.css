@@ -59,78 +59,6 @@
   }
   
   
-  .world{
-    float: right;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    background-color:#7B4DFE;
-  }
-  
-  .politics{
-    float: right;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    background-color:#419488;
-  }
-  
-  .business{
-    float: right;
-    color: white;
-    background-color: #4696EC;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  
-  .technology{
-    float: right;
-    color: black;
-    border-radius: 5px;
-    padding: 5px;
-    background-color:#CEDC39;
-  }
-  
-  .sports{
-    float: right;
-    color: black;
-    background-color:#F6C244;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  
-  .sport{
-    float: right;
-    color: black;
-    background-color: #F6C244;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  
-  .health{
-    float: right;
-    border-radius: 5px;
-    padding: 5px;
-    color: white;
-    background-color:#6E757C;
-  }
-  
-  .us{
-    float: right;
-    border-radius: 5px;
-    padding: 5px;
-    color: white;
-    background-color:gray;
-  }
-  
-  .nyregion{
-    float: right;
-    border-radius: 5px;
-    padding: 5px;
-    color: white;
-    background-color:#DDDDDD;
-  }
-  
   .Guardian{
     float: right;
     border-radius: 5px;
@@ -138,15 +66,7 @@
     color: white;
     background-color: #14284A;
   }
-  
-  .Nytimes{
-    float: right;
-    border-radius: 5px;
-    padding: 5px;
-    color: black;
-    background-color:#DDDDDD;
-  }
-  
+ 
   .date{
     float: left;
   }
