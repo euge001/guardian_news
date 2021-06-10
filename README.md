@@ -1,4 +1,4 @@
-Guardian News API based demo.
+/** Guardian News API based demo **/
 
 1. Main Page is ready
 2. Detailed Article Page is ready
